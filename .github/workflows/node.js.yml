@@ -27,3 +27,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
+    - run: |
+        sudo cp /home/ubuntu/frontend/_work/frontend-ec2/frontend-ec2/build/* /var/www/html
+        sudo systemctl restart nginx
